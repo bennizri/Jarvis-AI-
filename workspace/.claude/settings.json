@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(sudo *)",
+      "Bash(rm -rf /*)",
+      "Bash(*DROP DATABASE*)",
+      "Bash(*DROP SCHEMA*)",
+      "Bash(*DROP TABLE*)",
+      "Bash(*TRUNCATE*)",
+      "Bash(*FLUSHALL*)",
+      "Bash(*FLUSHDB*)",
+      "Bash(*migrate:fresh*)",
+      "Bash(*migrate:reset*)",
+      "Bash(*db:wipe*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(~/.ssh/**)",
+      "Read(~/mediafuse-kb/.env)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/bennizri/AI agent/workspace/.claude/hooks/jarvis-guard.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

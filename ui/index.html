@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>J.A.R.V.I.S</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="scanlines"></div>
+<header>
+  <span class="brand">J.A.R.V.I.S</span>
+  <span id="status-label">OFFLINE</span>
+  <span id="conn-dot" class="dot"></span>
+</header>
+<main>
+  <section id="left">
+    <canvas id="core"></canvas>
+    <div id="transcript" class="panel">
+      <h2>// TRANSCRIPT</h2>
+      <p id="transcript-text">—</p>
+    </div>
+  </section>
+  <section id="right">
+    <div id="fleet" class="panel">
+      <h2>// AGENTS <span id="agents-counts"></span></h2>
+      <ul id="agents-list"><li class="dim">no agents yet…</li></ul>
+    </div>
+    <div id="mission" class="panel">
+      <h2>// MISSION CONTROL</h2>
+      <canvas id="graph"></canvas>
+      <ul id="log"></ul>
+    </div>
+    <div id="answer" class="panel">
+      <h2>// OUTPUT</h2>
+      <p id="spoken-line"></p>
+      <pre id="answer-text"></pre>
+    </div>
+  </section>
+</main>
+<script src="ws.js"></script>
+<script src="hud.js"></script>
+<script src="graph.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# runtime state (machine-local, regenerated)
+workspace/hearing-log.tsv
+workspace/fleet-registry.json
+workspace/memory/
+workspace/*.txt
+
+# secrets — never commit
+.env
+.env.*
+*.local
+
+# os
+.DS_Store
